@@ -34,9 +34,11 @@ public class Enemy {
      * @param hero 攻撃対象
      */
     public void attack(Hero hero) {
-        int damage = (int)(Math.random() * attack);
-        System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.name, damage);
-        hero.wounded(damage);
+        if (!(dead)) {
+            int damage = (int)(Math.random() * attack);
+            System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.name, damage);
+            hero.wounded(damage);
+        }
     }
 
     /**
@@ -44,7 +46,7 @@ public class Enemy {
      * 指定されたダメージを hitPoint から引き、死亡判定を行う。
      * @param damage 受けたダメージ
      */
-    public void wounded(int damage){
+    public void wounded(int damage) {
         hitPoint -= damage;
         if( hitPoint < 0 ) {
             dead = true;

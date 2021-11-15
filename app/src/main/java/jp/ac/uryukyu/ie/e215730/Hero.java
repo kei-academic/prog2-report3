@@ -6,8 +6,7 @@ package jp.ac.uryukyu.ie.e215730;
  *  int hitPoint; //敵のHP
  *  int attack; //敵の攻撃力
  *  boolean dead; //敵の生死状態。true=死亡。
- * @author tnal on 2016/11/13.
- * @author Keigo Shimada
+ * @author kei-academic
  */
 public class Hero {
     private String name;
@@ -19,25 +18,61 @@ public class Hero {
     }
 
     private int hitPoint;
+
+    /**
+     * getHitPointメソッド
+     * フィールド値`hitPoint`を取り出す．
+     * @return this.hitPoint
+     */
     public int getHitPoint() {
         return this.hitPoint;
     }
+
+    /**
+     * setHitPointメソッド
+     * フィールド値`hitPoint`に値を代入する．
+     * @param hitPoint
+     */
     public void setHitPoint(int hitPoint) {
         this.hitPoint = hitPoint;
     }
 
     private int attack;
+
+    /**
+     * getAttackメソッド
+     * フィールド値`attack`を取り出す．
+     * @return this.attack
+     */
     public int getAttack() {
         return this.attack;
     }
+
+    /**
+     * setAttackメソッド
+     * フィールド値`attack`に値を代入する．
+     * @param attack
+     */
     public void setAttack(int attack) {
         this.attack = attack;
     }
 
     private boolean dead;
+
+    /**
+     * isDeadメソッド
+     * フィールド値`dead`を取り出す．
+     * @return this.dead
+     */
     public boolean isDead() {
         return this.dead;
     }
+
+    /**
+     * setDeadメソッド
+     * フィールド値`dead`に値を代入する．
+     * @param dead
+     */
     public void setDead(boolean dead) {
         this.dead = dead;
     }

@@ -5,14 +5,26 @@ package jp.ac.uryukyu.ie.e215730;
  *  String name; //敵の名前
  *  int hitPoint; //敵のHP
  *  int attack; //敵の攻撃力
- *  boolean dead; //敵の生死状態。true=死亡。
+ *  boolean dead; //敵の生死状態．true=死亡．
  * @author kei-academic
  */
 public class Hero {
     private String name;
+
+    /**
+     * getNameメソッド．
+     * フィールド値`name`を取り出す．
+     * @return this.name - 自分自身のインスタンスの`name`フィールド
+     */
     public String getName() {
         return this.name;
     }
+
+    /**
+     * setNameメソッド．
+     * フィールド値`name`に値を代入する．
+     * @param name 敵の名前
+     */
     public void setName(String name) {
         this.name = name;
     }
@@ -20,18 +32,18 @@ public class Hero {
     private int hitPoint;
 
     /**
-     * getHitPointメソッド
+     * getHitPointメソッド．
      * フィールド値`hitPoint`を取り出す．
-     * @return this.hitPoint
+     * @return this.hitPoint - 自分自身のインスタンスの`hitPoint`フィールド
      */
     public int getHitPoint() {
         return this.hitPoint;
     }
 
     /**
-     * setHitPointメソッド
+     * setHitPointメソッド．
      * フィールド値`hitPoint`に値を代入する．
-     * @param hitPoint
+     * @param hitPoint 敵のHP
      */
     public void setHitPoint(int hitPoint) {
         this.hitPoint = hitPoint;
@@ -40,18 +52,18 @@ public class Hero {
     private int attack;
 
     /**
-     * getAttackメソッド
+     * getAttackメソッド．
      * フィールド値`attack`を取り出す．
-     * @return this.attack
+     * @return this.attack - 自分自身のインスタンスの`attack`フィールド
      */
     public int getAttack() {
         return this.attack;
     }
 
     /**
-     * setAttackメソッド
+     * setAttackメソッド．
      * フィールド値`attack`に値を代入する．
-     * @param attack
+     * @param attack 敵の攻撃力
      */
     public void setAttack(int attack) {
         this.attack = attack;
@@ -60,25 +72,25 @@ public class Hero {
     private boolean dead;
 
     /**
-     * isDeadメソッド
+     * isDeadメソッド．
      * フィールド値`dead`を取り出す．
-     * @return this.dead
+     * @return this.dead - 自分自身のインスタンスの`dead`フィールド
      */
     public boolean isDead() {
         return this.dead;
     }
 
     /**
-     * setDeadメソッド
+     * setDeadメソッド．
      * フィールド値`dead`に値を代入する．
-     * @param dead
+     * @param dead 敵の生死状態．true=死亡．
      */
     public void setDead(boolean dead) {
         this.dead = dead;
     }
 
     /**
-     * コンストラクタ。名前、最大HP、攻撃力を指定する。
+     * コンストラクタ．名前，最大HP，攻撃力を指定する．
      * @param name ヒーロー名
      * @param maximumHP ヒーローのHP
      * @param attack ヒーローの攻撃力
@@ -92,8 +104,8 @@ public class Hero {
     }
 
     /**
-     * Enemyへ攻撃するメソッド。
-     * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
+     * Enemyへ攻撃するメソッド．
+     * attackに応じて乱数でダメージを算出し，hero.wounded()によりダメージ処理を実行．
      * @param e 攻撃対象
      */
     public void attack(Enemy e) {
@@ -103,8 +115,8 @@ public class Hero {
     }
 
     /**
-     * 自身へ攻撃されたときのダメージ処理をするメソッド。
-     * 指定されたダメージを hitPoint から引き、死亡判定を行う。
+     * 自身へ攻撃されたときのダメージ処理をするメソッド．
+     * 指定されたダメージを hitPoint から引き，死亡判定を行う．
      * @param damage 受けたダメージ
      */
     public void wounded(int damage) {
